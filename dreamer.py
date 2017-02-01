@@ -149,7 +149,7 @@ def main(inputdir, outputdir, preview, octaves, octave_scale, iterations, jitter
                            channel_swap=(2, 1, 0))  # the reference model has channels in BGR order instead of RGB
 
     if gpu is 1:
-        caffe.set_mode_gpu()
+        caffe.set_mode_gpu_lowmem()
         caffe.set_device(0)
 
     # load images & sort them
